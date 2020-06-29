@@ -1,43 +1,93 @@
 /* Import fonts from google font */
 @import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
 
-html, body{
-    height: 100%;
-    overflow: hidden;
-    background: #ffe259;
-    background: var(--mango-gradient);
-}
-
-/* Variables */
 :root{
-    --primary-gradient: linear-gradient(to right, #4e4376, #2b5876);
-    --mango-gradient : linear-gradient(to right, #ffa751, #ffe259);
-    --text-color: #F7F9F9;
-    --Montserrat: "Montserrat", cursive;
-    --Lobster: "Lobster", cursive;
-    --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
-    --border-color: rgba(0,0,0,0.329);
+	 --primary-gradient: linear-gradient(to right, #4e4376, #2b5876);
+	 --mango-gradient : linear-gradient(to right, #ffa751, #ffe259);
+	 --text-color: #F7F9F9;
+	 --Montserrat: "Montserrat", cursive;
+	 --Lobster: "Lobster", cursive;
+	 --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
+	 --border-color: rgba(0,0,0,0.329);
 }
 
+body{
+	 display: fixed;
+	 overflow: hidden;
+	 background: #ffe259;
+	 background: var(--mango-gradient);
+	 size:auto;
+	 /*background-color: rgba(20, 50, 100, 10);
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+ 	background-position:top;*/
+}
+
+.section{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: 100px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+
+\*ေကာ္လံ (၃) ခုအား တိုင္တစ္ခုတည္းျဖစ္ေအာင္လုပ္ေပးျခင္*\
+.box-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.box-2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color: #599bb3;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 40px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #3d768a;
+}
+/* container and panel နဲ့ တစ္တြဲ */
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 98%;
-    max-height: 610px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height:inherit;
+	 page-break-inside: avoid;
 }
 
 .container .panel{
-    width: 60%;
-    height: 72%;
-    box-shadow: var(--primary-gradient);
+   display: grid;
+    grid-template-columns : repeat (2, 1fr);
 }
 
 .row{
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-row: 1fr;
     height: 100%;
     background: #fff;
+    box-shadow: var(--primary-gradient);
 }
 
 .liquid{
