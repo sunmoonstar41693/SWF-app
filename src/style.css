@@ -1,247 +1,88 @@
 /* Import fonts from google font */
 @import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
 
-:root{
-	 --primary-gradient: linear-gradient(to right, #4e4376, #2b5876);
-	 --mango-gradient : linear-gradient(to right, #ffa751, #ffe259);
-	 --text-color: #F7F9F9;
-	 --Montserrat: "Montserrat", cursive;
-	 --Lobster: "Lobster", cursive;
-	 --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
-	 --border-color: rgba(0,0,0,0.329);
+:root {
+  --primary-gradient: linear-gradient(to right, #4e4376, #2b5876);
+  --mango-gradient: linear-gradient(to right, #778899, #616D7E);
+  --text-color: #F7F9F9;
+  --Montserrat: "Montserrat", cursive;
+  --Lobster: "Lobster", cursive;
+  --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
+  --border-color: rgba(0, 0, 0, 0.329);
 }
 
-body{
-	 display: fixed;
-	 overflow: hidden;
-	 background: #ffe259;
-	 background: var(--mango-gradient);
-	 size:auto;
-	 /*background-color: rgba(20, 50, 100, 10);
+body {
+  display: block;
+  overflow: hidden;
+  background: var(--mango-gradient);
+  size: auto;
+  /*background-color: rgba(20, 50, 100, 10);
  	background-repeat: no-repeat;
  	background-attachment: fixed;
  	background-position:top;*/
 }
-.container{
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 height:inherit;
-	 page-break-inside: avoid;
-}
-/*
-.section{
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-auto-rows: 100px;
-}
-*/
-.wrapper {
+.container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 100px;
+  justify-content: center;
+  align-items: center;
 }
-
-\*ေကာ္လံ (၃) ခုအား တိုင္တစ္ခုတည္းျဖစ္ေအာင္လုပ္ေပးျခင္*\
-.box-1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
+#anidiv{
+  animation : boxanimation 3s infinite;
+}
+h1{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+ 	color: rgb(255, 245, 238);
+  padding-top: 10%;
+  padding-bottom: 5%;
+  /*box-shadow: 0px 10px 14px -7px #276873;*/
+}
+h2{
+  display: inline;
+  font-family: fantasy;
+  font-size: 1.5rem;
+  color: rgb(255, 245, 238);
+  padding: 5px 1px;
+}
+@keyframes boxanimation {
+  50% {box-shadow: 0px 10px 14px -2px #276873;
+  }
+}
+.wrapper-login {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1fr 1fr);
+  grid-auto-rows: minmax(30%, auto);
+  grid-row-gap: 15px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
-.box-2 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 button {
-	box-shadow: 0px 10px 14px -7px #276873;
-	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-	background-color: #599bb3;
-	border-radius: 8px;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-family: Arial;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 10px 40px;
-	text-decoration: none;
-	text-shadow: 0px 1px 0px #3d768a;
-}
-.login .btn-signup, 
-form .btn-login{
-    background: var(--primary-gradient);
-    float: right;
-    margin: 1rem;
-}
-.btn{
-    padding: .5rem 1.5rem;
-    border: none;
-    border-radius: 4rem;
-    background: #2b5876;
-    color: whitesmoke;
-    font-size: .7rem;
-    font-family: var(--Montserrat);
-    box-shadow: var(--primary-shadow);
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 10px;
+  display: inline-block;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px 40px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
     cursor: pointer;
 }
-
-.titles{
-    margin-bottom: 2.2rem;
+button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+  cursor: pointer;
 }
-form .btn-login{
-    float: none;
-    padding: .8rem 5rem;
-    margin-left: 2rem;
+button:active {
+	position:relative;
+	top:1px;
 }
-.owl-carousel{
-    width: 100%;
-    height: 320px;
-    max-height: 330px;
-}
-
-.owl-carousel .owl-item .login_img{
-    float: right;
-    width: 400px;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-right: 3rem;
+input{
+  box-shadow: 0px 10px 14px -7px #276873;
+  padding: 0px 5px;
 }
 
-.owl-dots{
-    position: fixed;
-    padding: 3rem 1.2rem;
-    display: flex !important;
-    flex-direction: column;
-    transform: translateY(-240px);
-}
-
-.owl-dots button{
-    border-radius: 5rem;
-    margin: .3rem 0;
-}
-
-.owl-dots button span{
-    background: var(--text-color) !important;
-    margin: 0rem .6rem !important;
-}
-
-.owl-dots .active{
-    border: 1px solid #ffd765 !important;
-}
-
-.owl-dots .active span{
-    background: #ffd765 !important;
-    margin: .3rem .5rem !important;
-}
-
-/* container and panel နဲ့ တစ္တြဲ */
-/*
-.container .panel{
-   display: grid;
-    grid-template-columns : repeat (2, 1fr);
-}
-
-.row{
-    display: grid;
-    grid-template-row: 1fr;
-    height: 100%;
-    background: #fff;
-    box-shadow: var(--primary-gradient);
-}
-
-.liquid{
-    background: url('../assets/Wave.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.liquid h4{
-    text-align: left;
-    padding: 0 2rem;
-    color: whitesmoke;
-    font-family: var(--Montserrat);
-}
-
-
-.follow{
-    padding: 0 1.4rem;
-    padding-top: 1.4rem;
-    font-family: var(--Lobster);
-    color: whitesmoke;
-    position: relative;
-    font-size: .9rem;
-}
-
-.follow::after{
-    content: "";
-    position: absolute;
-    left: 14%;
-    width: 50px;
-    border: 1px solid whitesmoke;
-    border-radius: 4rem;
-    margin-top: .5rem;
-}
-
-.follow i:first-child{
-    margin-left: 4rem;
-}
-
-/* Second Column Login */
-/*
-
-
-form{
-    height: 55%;
-    max-height: 280px;
-    margin-top: 5.5rem;
-}
-
-form h3, form h6{
-    font-family: var(--Montserrat);
-    padding: 0;
-    margin: 0;
-    padding-left: 3rem;
-}
-
-form h6{
-    padding-left: 4.5rem;
-    font-family: var(--Lobster);
-    color: #444444d2;
-}
-
-form .form-group{
-    text-align: left;
-    border: 1px solid var(--border-color);
-    margin-top: .9rem;
-    margin-right: 2rem;
-    border-radius: 3rem;
-}
-
-form .form-group .form-input{
-    padding: .5rem 1rem;
-    background: transparent;
-    border: none;
-    font-family: var(--Montserrat);
-    font-size: .9rem;
-    overflow: hidden;
-}
-
-form input:focus{
-    outline: none;
-}
-
-form .input-icon{
-    display: inline;
-    color: var(--border-color);
-}
-
-*/
